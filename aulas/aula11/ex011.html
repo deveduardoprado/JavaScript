@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>Descubra se você é Brasileiro ou Gringo!</h1>
+    <p>Qual País você nasceu? <input type="text" name="txtn1" id="txtn1">!</p>
+    <input type="button" value="verificar" onclick="calcular()">
+    <div id="res">
+
+    </div>
+    <script>
+        //AINDA NÃO CONSEGUI FAZER FUNCIONAR CERTO, ALGUÉM SABE ONDE TA O ERRO?
+    function calcular() {
+        var res = window.document.querySelector('div#res')
+        var país = window.document.getElementById('txtn1')
+        res.innerHTML = `<p>Seu País de Origem é ${país}!`
+        if (país != 'Brasil') {
+            res.innerHTML += ('Você é Estrangeiro!')
+        } else {
+        res.innerHTML += ('Você é Brasileiro!')
+        }
+    }
+    </script>
+</body>
+</html>
